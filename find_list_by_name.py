@@ -11,14 +11,14 @@ try:
     name = input("Anna listan nimi: ")
     choice = input("Haluatko nähdä kaikki tehtävät(a), tekemättömät(n) vai tehdyt(d)? ")
 
-    lists = db.lists.find_one({'name': name})
+    list = db.lists.find_one({'name': name})
 
-    if lists is None:
+    if list is None:
         raise Exception("List not found")
     
-    list_id = ObjectId(lists['_id'])
+    list_id = ObjectId(list['_id'])
 
-    print(lists['name'])
+    print(list['name'])
 
     # Check task based on input choice
     # Find all tasks
