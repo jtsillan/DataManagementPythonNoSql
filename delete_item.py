@@ -12,6 +12,7 @@ try:
     res = db.items.delete_one({'_id': ObjectId(_id)})
 
     if res.deleted_count == 0:
+        # PALAUTE no nyt on siistiä virheenkäsittelyä :)
         raise Exception("Listaa ei löytynyt")  
 
     

@@ -11,6 +11,8 @@ try:
     list_name = input("Mihin listaan haluat lisätä tehtävän? ")
     task_name = input("Anna tehtävän nimi: ")
 
+    # PALAUTE
+    # ei kannata käyttää muuttujien niminä varattuja nimiä
     list = db.lists.find_one({'name': list_name})
 
     if list is None:
